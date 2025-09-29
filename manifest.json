@@ -1,0 +1,19 @@
+{
+  "name": "Advantage Conveyor Price Check",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.zoro.com/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
